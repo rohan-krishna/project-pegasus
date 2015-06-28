@@ -83,7 +83,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				
 
-				<div class="col-md-4">
+				<div class="col-md-4 margin-152">
 					<div class="single-post-entry">
 						<figure class="effect-apollo">
 							<?php if( has_post_thumbnail() ) { the_post_thumbnail('full'); }?>
@@ -112,21 +112,6 @@ get_header(); ?>
 
 
 		</main><!-- #main -->
-		<div class="site-social">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="col-md-2 social-capstone">
-					
-					</div>
-					<div class="col-md-6">
-						
-					</div>
-					<div class="col-md-4">
-						
-					</div>
-				</div>
-			</div>
-		</div>
 	</div><!-- #primary -->
 	<script type="text/javascript">
 	$(document).ready(function() {

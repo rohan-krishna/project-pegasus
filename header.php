@@ -41,7 +41,9 @@
 			<a href="<?php echo bloginfo('home'); ?>">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newLogo.png" draggable="false" alt="<?php bloginfo('name'); ?>" style="float:left;"/>
 			</a>
-			<h1 class="site-title">Dr.MGR<br/>Educational & Research Institute<br/>University</h1>
+			<h1 class="site-title">Dr.MGR<br/>
+			<span class="thin-font">Educational & Research Institute</span><br/>
+			<span class="medium-font">University</span></h1>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/typo.png" draggable="false" alt="<?php bloginfo('name'); ?>" style="float:right;margin-top: 3%;" />
 		</div><!-- .site-branding -->
 
@@ -83,7 +85,17 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<?php if ( is_page() ) { ?>
+
+	<div class="page-title">
+		<div class="container">
+			<h1><?php the_title(); ?>
+		</div>
 	</div>	
+
+	<?php } ?>
 
 	<div id="content" class="site-content">
 

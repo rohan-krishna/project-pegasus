@@ -414,7 +414,7 @@ html {
 }
 
 body {
-	background: #EFEBE9; /* Fallback for when there is no custom background color defined. */
+	background: #FFFFFF; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -1230,13 +1230,26 @@ object {
 	color: #5D4037;
 	overflow: hidden;
 	text-shadow: 0px 1px 1px #fff;
-	font-family: "Helvetica Neue",sans-serif;
 	font-weight: 800;
 	-webkit-font-smoothing: antialiased;
 
 }
 .site-branding {
 	text-align: center;
+}
+.site-title-sub {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.thin-font {
+	font-weight: 200;
+}
+.medium-font {
+	font-weight: 400;
+}
+.page-title {
+	background: #EEEEEE;
 }
 /*--------------------------------------------------------------
 ## Site Slider
@@ -1261,6 +1274,27 @@ object {
 }
 .slider-wrapper {
 	margin-top: 1.52em;
+}
+
+.site-testimonial {
+	padding: 3.52em;
+	background: #eee;
+	text-align: center;
+}
+.site-testimonial p {
+	font-size: 1.52em;
+}
+.site-testimonial .item:before {
+	position: absolute;
+  z-index: -1;
+  top: 0px;
+  right: 9%;
+  color: #fff;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 /*--------------------------------------------------------------
 ## Site Content
@@ -1303,6 +1337,30 @@ object {
 	overflow: hidden;
 	width: 100%;
 }
+
+.inner-filer {
+	margin-left: 0px;
+	padding-left: 0px;
+	list-style: none;
+	overflow: hidden;
+	display: block;
+}
+.inner-filter li {
+	float: left;
+	display: inline-block;
+}
+.inner-filter li a {
+	display: block;
+	padding: 0.5em 1em;
+	border-right: 1px solid #eee;
+}
+.margin-152 {
+	margin: 1.52em 0;
+}
+.staff-meta {
+	padding: 1.52em 0;
+	background: #eee;
+}
 /*--------------------------------------------------------------
 ## Site Post
 --------------------------------------------------------------*/
@@ -1323,7 +1381,7 @@ object {
 	position: relative;
 	float: left;
 	overflow: hidden;
-	margin: 10px 1%;
+	margin: 0 1%;
 	min-width: 100%;
 	max-width: 480px;
 	min-height: 350px;

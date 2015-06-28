@@ -32,7 +32,6 @@
 						autoHeight: true,
 						items: 1,
 						nav: true,
-						autoWidth: true,
 						navText: ["<i class='fa fa-chevron-left fa-3x'></i>","<i class='fa fa-chevron-right fa-3x'></i>"],
 					});
 				});

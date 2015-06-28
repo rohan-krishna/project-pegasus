@@ -13,11 +13,11 @@
 
 				<article>
 					<header>
-						<h1><?php the_title(); ?></h1>
 							<figure class="post-figure">
 								<?php if ( has_post_thumbnail() ) : the_post_thumbnail('full',array('class' => 'post-thumbnail')); endif; ?>
 							</figure>
 					<?php endwhile;?>
+					<?php /*
 						<div class="row">
 
 							<div class="col-md-12">
@@ -54,6 +54,7 @@
 							</div>
 							
 						</div>
+						*/ ?>
 						<section>
 						<?php while( have_posts() ) : the_post(); ?>
 							<?php the_content(); ?>
