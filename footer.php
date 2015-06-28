@@ -11,17 +11,21 @@
 	</div><!-- #content -->
 
 	<?php if ( is_home() ) { ?>
-	<div class="row site-testimonial" id="test">
+	<div class="row site-testimonial">
 		<div class="container">
-			<div class="col-md-12">
+			<div class="col-md-12" id="test">
+				<?php 
+
+					$args = array ( 'post_type' => 'testimonial');
+					$testi = new WP_Query($args); 
+				?>
+				<?php while ( $testi->have_posts() ) : $testi->the_post();  ?>
 				<div class="col-md-12 item">
 					<blockquote>
-						<p>This is an awesome university.</p>
+						<p><?php the_excerpt() ?></p>
 					</blockquote>
-					<div class="professor">
-							
-					</div>
 				</div>
+			<?php endwhile; ?>
 			</div>
 		</div>
 	</div>
@@ -47,7 +51,8 @@
 	$(document).ready(function() {
 		$('#test').owlCarousel({
 			items : 1,
-			center : true
+			center : true,
+			autoplay : true
 		});
 	});
 

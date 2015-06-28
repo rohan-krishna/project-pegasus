@@ -237,6 +237,47 @@ function event_post_init()
 	register_post_type('event',$args);
 }
 
+/*
+Define Post-Type for Testimonials
+*/
+
+add_action('init','testi_post_init');
+
+function testi_post_init()
+{
+	$labels = array(
+		'name' => 'Testimonials',
+		'singular_name' => 'Testimonial',
+		'menu_name' => 'Testimonials',
+		'name_admin_bar' => 'Testimonials',
+		'add_new' => 'Add New',
+		'add_new_item' => 'Add New Testimonial',
+		'new_item' => 'New Testimonial',
+		'edit_item' => 'Edit Testimonial',
+		'view_item' => 'View Testimonial',
+		'all_items' => 'View All Testimonials',
+		'search_items' => 'Search Testimonials',
+		'parent_item_colon' => 'Parent Testimonial',
+		'not_found' => 'No Testimonials found.',
+		'not_found_in_trash' => 'No Testimonials in trash.' );
+
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'public_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => false,
+		'query_var' => true,
+		'exclude_from_search' => true,
+		'rewrite' => array('slug'=>'testimonial'),
+		'capability_type' => 'post',
+		'has_archive' => true,
+		'menu_position' => null,
+		'supports' => array('title','thumbnail','author','excerpt','editor')
+		);
+	register_post_type('testimonial',$args);
+}
 
 /*
 
